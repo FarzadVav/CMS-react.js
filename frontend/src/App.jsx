@@ -13,7 +13,7 @@ export default function App() {
       <div className="w-2/12 h-full">
         {<SideBar />}
       </div>
-      <div className="bg-white w-10/12 h-full flex flex-col gap-3 p-5 rounded-3xl">
+      <div className="bg-white w-10/12 h-full flex flex-col gap-3 p-6 rounded-3xl">
         {<Header />}
         {router}
       </div>
