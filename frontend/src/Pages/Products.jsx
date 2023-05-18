@@ -1,24 +1,39 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+
 import AddNewProduct from '../Components/AddNewProduct'
 import ProductTable from '../Components/ProductTable'
 import DeleteModal from '../Components/DeleteModal'
+import EditProductModal from '../Components/EditProductModal'
 
 function Products() {
-  const [showModal, setShowModal] = useState(false)
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const [showEditModal, setShowEditModal] = useState(false)
 
-  function showModalHandler() {
-    setShowModal(true)
+  function showDeleteModalHandler() {
+    setShowDeleteModal(true)
   }
 
-  function closeModalHandler() {
-    setShowModal(false)
+  function closeDeleteModalHandler() {
+    setShowDeleteModal(false)
+  }
+
+  function showEditModalHandler() {
+    setShowEditModal(true)
+  }
+
+  function closeEditModalHandler() {
+    setShowEditModal(false)
   }
 
   return (
     <div className='w-full flex flex-col justify-center items-center gap-9 mt-6 relative'>
       <AddNewProduct />
-      <ProductTable showModalHandler={showModalHandler} />
-      <DeleteModal showModal={showModal} closeModalHandler={closeModalHandler} />
+      <ProductTable
+        showDeleteModalHandler={showDeleteModalHandler}
+        showEditModalHandler={showEditModalHandler}
+      />
+      <DeleteModal showDeleteModal={showDeleteModal} closeDeleteModalHandler={closeDeleteModalHandler} />
+      <EditProductModal showEditModal={showEditModal} closeEditModalHandler={closeEditModalHandler} />
     </div>
   )
 }
