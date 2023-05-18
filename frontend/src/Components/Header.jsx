@@ -1,17 +1,11 @@
 import React from 'react'
 
-import { Avatar } from 'flowbite-react'
-
 function Header() {
   return (
     <div className='bg-blue-100 w-full flex justify-between items-center px-5 py-3 rounded-2xl'>
       <div className="flex justify-center items-center gap-3">
-        <Avatar
-          img="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-          rounded={true}
-          bordered={true}
-          color="success"
-        />
+        <img className='w-10 h-10 rounded-full ring-2 ring-offset-1 ring-green-300'
+          src="https://pixlr.com/studio/template/6264364c-b8cc-4f4f-92d8-28c69a2b756w/thumbnail.webp"/>
         <span>فرزاد وحدتی نژاد - FarzadVav</span>
       </div>
       <div className="flex justify-center items-center gap-3 rounded-2xl">
