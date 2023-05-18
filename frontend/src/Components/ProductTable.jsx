@@ -23,8 +23,8 @@ function ProductTable({ showDeleteModalHandler, showEditModalHandler }) {
       <tbody className='w-full flex items-center p-3 border-b border-slate-200'>
         <tr className='w-2/12 font-light'>
           <td>
-            <img className='w-10 h-10 rounded-full ring-2 ring-offset-1 ring-slate-300
-              cursor-zoom-in hover:scale-[3] hover:-translate-x-7'
+            <img className='w-10 h-10 rounded-full
+              cursor-zoom-in duration-100 hover:scale-[3] hover:-translate-x-7'
               src="https://ladanoil.com/wp-content/uploads/2019/11/drink-oil.jpg" />
           </td>
         </tr>
