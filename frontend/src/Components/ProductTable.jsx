@@ -4,39 +4,40 @@ function ProductTable({ showDeleteModalHandler, showEditModalHandler }) {
   return (
     <table className='w-full'>
       <thead className='bg-slate-200 text-slate-700 w-full flex items-center p-3 rounded-t-2xl'>
-        <tr className='text-right w-2/12'>
+        <tr className='w-2/12'>
           <th className='font-light'>عکس محصول</th>
         </tr>
-        <tr className='text-right w-3/12'>
+        <tr className='w-3/12'>
           <th className='font-light'>اسم</th>
         </tr>
-        <tr className='text-right w-2/12'>
+        <tr className='w-2/12'>
           <th className='font-light'>قیمت</th>
         </tr>
-        <tr className='text-right w-2/12'>
+        <tr className='w-2/12'>
           <th className='font-light'>موجودی</th>
         </tr>
-        <tr className='text-center w-3/12'>
+        <tr className='w-3/12 flex justify-center'>
           <th className='font-light'>عملیات</th>
         </tr>
       </thead>
       <tbody className='w-full flex items-center p-3 border-b border-slate-200'>
-        <tr className='text-right w-2/12 font-light'>
+        <tr className='w-2/12 font-light'>
           <td>
-            <img className='w-16 h-16 rounded-full ring-2 ring-offset-1 ring-slate-300'
+            <img className='w-10 h-10 rounded-full ring-2 ring-offset-1 ring-slate-300
+              cursor-zoom-in hover:scale-[3] hover:-translate-x-7'
               src="https://ladanoil.com/wp-content/uploads/2019/11/drink-oil.jpg" />
           </td>
         </tr>
-        <tr className='text-right w-3/12 font-light'>
+        <tr className='w-3/12 font-light'>
           <td>روغن زیتون</td>
         </tr>
-        <tr className='text-right w-2/12 font-light'>
+        <tr className='w-2/12 font-light'>
           <td>127,000</td>
         </tr>
-        <tr className='text-right w-2/12 font-light'>
+        <tr className='w-2/12 font-light'>
           <td>52</td>
         </tr>
-        <tr className='text-right w-3/12 flex justify-center items-center gap-6'>
+        <tr className='w-3/12 flex justify-center items-center gap-6'>
           <td className='border border-slate-500 text-slate-500 w-10 h-10 rounded-full
             flex justify-center items-center
             cursor-pointer hover:bg-slate-500 hover:text-white hover:ring-4 hover:ring-slate-200'>
