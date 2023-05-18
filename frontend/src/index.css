@@ -30,6 +30,24 @@
   h6 {
     font-family: 'sansbold';
   }
+
+  #body-dashboard::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  #body-dashboard::-webkit-scrollbar-track {
+    margin: 1.5rem 0;
+    background: none;
+  }
+  
+  #body-dashboard::-webkit-scrollbar-thumb {
+    background: #6c829b;
+  }
+
+  #body-dashboard::-webkit-scrollbar-thumb:hover {
+    background: none;
+  }
+  
 }
 
 @layer utilities {
