@@ -55,43 +55,30 @@ function ProductTable({ showDeleteModalHandler, showEditModalHandler }) {
   return (
     <>
       <table className='w-full'>
-        <thead className='bg-slate-200 text-slate-700 w-full flex items-center p-3 rounded-t-2xl'>
-          <tr className='w-2/12'>
-            <th className='font-light'>عکس محصول</th>
-          </tr>
-          <tr className='w-3/12'>
-            <th className='font-light'>اسم</th>
-          </tr>
-          <tr className='w-2/12'>
-            <th className='font-light'>قیمت</th>
-          </tr>
-          <tr className='w-2/12'>
-            <th className='font-light'>موجودی</th>
-          </tr>
-          <tr className='w-3/12 flex justify-center'>
-            <th className='font-light'>عملیات</th>
+        <thead className='t-head'>
+          <tr className='t-head__tr'>
+            <th className='w-2/12'>عکس محصول</th>
+            <th className='w-2/12'>اسم</th>
+            <th className='w-2/12'>قیمت</th>
+            <th className='w-2/12'>فروش</th>
+            <th className='w-2/12'>موجودی</th>
+            <th className='w-2/12 t-head__actions'>عملیات</th>
           </tr>
         </thead>
         <tbody className='w-full'>
           {
             allProducts.map(product => (
-              <tr key={product.id} className='w-full flex items-center p-3 border-b border-slate-200'>
-                <td className='w-2/12 font-light'>
+              <tr key={product.id} className='t-body__tr'>
+                <td className='w-2/12'>
                   <img className='w-10 h-10 rounded-full shadow-sm shadow-[#00000015]
-                  cursor-zoom-in duration-100 hover:scale-[3] hover:-translate-x-7'
+                  cursor-zoom-in duration-100 hover:scale-[2.5] hover:-translate-x-5'
                     src={product.img} />
                 </td>
-                <td className='w-3/12 font-light'>{product.title}</td>
-                <td className='w-2/12 font-light'>{product.price} تومان</td>
-                <td className='w-2/12 font-light'>{product.count} عدد</td>
-                <td className='w-3/12 flex justify-center items-center gap-6'>
-                  <div className='border border-slate-500 text-slate-500 w-10 h-10 rounded-full
-                  flex justify-center items-center
-                  cursor-pointer hover:bg-slate-500 hover:text-white hover:ring-4 hover:ring-slate-200'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="duration-0 w-6 h-6">
-                      <path className='duration-0' strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                    </svg>
-                  </div>
+                <td className='w-2/12'>{product.title}</td>
+                <td className='w-2/12'>{product.price} تومان</td>
+                <td className='w-2/12'>{product.sale} عدد</td>
+                <td className='w-2/12'>{product.count} عدد</td>
+                <td className='w-2/12 t-body__actions'>
                   <div className='border border-blue-500 text-blue-500 w-10 h-10 rounded-full
                     flex justify-center items-center
                     cursor-pointer hover:bg-blue-500 hover:text-white hover:ring-4 hover:ring-blue-200'

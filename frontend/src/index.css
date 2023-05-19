@@ -111,4 +111,32 @@
     @apply bg-black bg-opacity-50 w-screen h-screen
     flex justify-center items-center fixed top-0 left-0 show-modal;
   }
+
+  .title {
+    @apply text-slate-700 w-full text-3xl text-right sansbold;
+  }
+
+  .t-head {
+    @apply bg-slate-200 text-slate-700 w-full flex items-center p-3 rounded-t-2xl;
+  }
+
+  .t-head th {
+    @apply font-light text-right;
+  }
+
+  .t-head__tr {
+    @apply w-full flex items-center;
+  }
+
+  .t-body__tr {
+    @apply w-full flex items-center p-3 border-b border-slate-200;
+  }
+
+  .t-head__actions {
+    @apply flex justify-center text-center;
+  }
+
+  .t-body__actions {
+    @apply flex justify-center items-center gap-6;
+  }
 }
