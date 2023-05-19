@@ -6,9 +6,9 @@ function DeleteModal({ showDeleteModal, closeDeleteModalHandler, deleteProductHa
       <div className='bg-white h-48 flex flex-col justify-center items-center gap-6 rounded-2xl p-9'>
         <h1 className='text-2xl text-slate-700'>آیا از حذف کردن اطمینان دارید؟</h1>
         <div className="w-full flex justify-center items-center gap-3">
-          <button className='w-1/3 btn btn-out-danger'
+          <button className='w-1/3 btn btn-out-danger justify-center'
             onClick={deleteProductHandler}>حذف شود</button>
-          <button className='w-1/3 btn btn-out-blue'
+          <button className='w-1/3 btn btn-out-blue justify-center'
             onClick={closeDeleteModalHandler}>لغو</button>
         </div>
       </div>

@@ -14,8 +14,8 @@ function EditProductModal({ showEditModal, closeEditModalHandler }) {
           </svg>
         </div>
         <div className="w-full flex justify-center items-center gap-3">
-          <button className='w-1/2 btn btn-out-success'>ثبت اطلاعات</button>
-          <button className='w-1/2 btn btn-out-blue'
+          <button className='w-1/2 btn btn-out-success justify-center'>ثبت اطلاعات</button>
+          <button className='w-1/2 btn btn-out-blue justify-center'
             onClick={closeEditModalHandler}>لغو</button>
         </div>
       </div>
