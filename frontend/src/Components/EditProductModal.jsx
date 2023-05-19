@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import ProductInput from './ProductInput'
+import { updateProduct } from '../utility/connections'
 
 function EditProductModal(props) {
   const productNameRef = useRef()
@@ -16,9 +17,26 @@ function EditProductModal(props) {
     productCountRef.current.value = props.productDetails[0].count
     productColorsRef.current.value = props.productDetails[0].colors
     productPopularRef.current.value = props.productDetails[0].popularity
-    productSalesRef.current.value = props.productDetails[0].sales
+    productSalesRef.current.value = props.productDetails[0].sale
     productImgRef.current.value = props.productDetails[0].img
   })
+
+  function submitEdit() {
+    const updatedValues = {
+      title: productNameRef.current.value,
+      price: productPriceRef.current.value,
+      count: productCountRef.current.value,
+      img: productImgRef.current.value,
+      popularity: productPopularRef.current.value,
+      sale: productSalesRef.current.value,
+      colors: productColorsRef.current.value,
+    }
+
+    updateProduct(props.productDetails[0].id, updatedValues)
+      .then(res => {
+        props.submitEditModalHandler()
+      })
+  }
 
   return (
     <div className={props.showEditModal ? 'bg-modal' : 'hidden'}>
@@ -101,7 +119,8 @@ function EditProductModal(props) {
           )}
         />
         <div className="w-full flex justify-center items-center gap-3 mt-3">
-          <button className='w-1/2 btn btn-out-success justify-center'>ثبت اطلاعات</button>
+          <button className='w-1/2 btn btn-out-success justify-center'
+            onClick={submitEdit}>ثبت اطلاعات</button>
           <button className='w-1/2 btn btn-out-blue justify-center'
             onClick={props.closeEditModalHandler}>لغو</button>
         </div>

@@ -5,8 +5,17 @@ export const getAllProducts = async () => {
 }
 
 export const deleteProduct = async id => {
-  console.log(mainUrl + 'products/' + id);
   return await fetch(mainUrl + 'products/' + id, {
     method: 'DELETE'
   }).then(response => response)
+}
+
+export const updateProduct = async (id, contentBody) => {
+  return await fetch(mainUrl + 'products/' + id, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(contentBody)
+  }).then(response => response.json())
 }

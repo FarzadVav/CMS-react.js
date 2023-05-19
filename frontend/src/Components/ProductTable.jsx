@@ -30,6 +30,13 @@ function ProductTable({ showDeleteModalHandler, showEditModalHandler }) {
     setShowDeleteModal(false)
   }
 
+  function deleteProductHandler() {
+    deleteProduct(productId).then(() => {
+      setShowDeleteModal(false)
+      getAndSetAllProducts()
+    })
+  }
+
   function showEditModalHandler(id) {
     setShowEditModal(true)
     const filteredProduct = allProducts.filter(product => product.id === id);
@@ -40,11 +47,9 @@ function ProductTable({ showDeleteModalHandler, showEditModalHandler }) {
     setShowEditModal(false)
   }
 
-  function deleteProductHandler() {
-    deleteProduct(productId).then(() => {
-      setShowDeleteModal(false)
-      getAndSetAllProducts()
-    })
+  function submitEditModalHandler() {
+    getAndSetAllProducts()
+    setShowEditModal(false)
   }
 
   return (
@@ -125,6 +130,7 @@ function ProductTable({ showDeleteModalHandler, showEditModalHandler }) {
             productDetails={selectProduct}
             showEditModal={showEditModal}
             closeEditModalHandler={closeEditModalHandler}
+            submitEditModalHandler={submitEditModalHandler}
           />
         )
       }
